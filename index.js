@@ -104,11 +104,27 @@ equal.addEventListener("click", () => {
   }
 });
 
-cancel.addEventListener("click", () => {
+// cancel.addEventListener("click", () => {
   
-  dis.style.animation = "hide 3s ease-in-out 1s"
+//   dis.style.animation = "hide 3s ease-in-out 1s"
  
   
-});
+// });
+
+document.querySelector(".hide").addEventListener("click",()=>{
+
+  dis.style.animation=" hide 2s ease-in-out"
+  setTimeout(() => {
+    dis.classList.add("chupao")
+    dis.classList.remove("dikaho")
+  }, 2000);
+  
+})
+document.querySelector(".show").addEventListener("click",()=>{
+dis.style.animation="show 1.5s ease-in-out";
+dis.classList.add("dikaho")
+dis.classList.remove("chupao")
+
+})
 
 
